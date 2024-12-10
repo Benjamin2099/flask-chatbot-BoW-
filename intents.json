@@ -1,0 +1,14 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": ["Hallo", "Hi", "Hey", "Guten Tag"],
+            "responses": ["Hallo! Wie kann ich dir helfen?", "Hi! Was möchtest du wissen?"]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": ["Tschüss", "Auf Wiedersehen", "Bye"],
+            "responses": ["Auf Wiedersehen!", "Bis zum nächsten Mal!"]
+        }
+    ]
+}
