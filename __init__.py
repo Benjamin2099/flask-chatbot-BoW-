@@ -1,17 +1,5 @@
-from flask import Flask
-from .extensions import init_extensions
+from flask import Blueprint
 
-def create_app():
-    app = Flask(__name__)
+chatbot_bp = Blueprint('chatbot', __name__, template_folder='templates')
 
-    # Konfiguriere die MongoDB-URI (ersetze mit deiner URI in einer echten App)
-    app.config["MONGO_URI"] = "mongodb://localhost:27017/chatbot"
-
-    # Initialisiere Erweiterungen
-    init_extensions(app)
-
-    # Blueprint registrieren
-    from .chatbot import chatbot_bp
-    app.register_blueprint(chatbot_bp, url_prefix='/chatbot')
-
-    return app
+from . import routes
